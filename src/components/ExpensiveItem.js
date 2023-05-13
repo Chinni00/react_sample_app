@@ -1,19 +1,21 @@
 import React from "react";
-import './ExpensiveItem.css';
+import "./ExpensiveItem.css";
 
-export default function ExpensiveItem() {
-    const date =new Date(2023 ,4,13)
-    const expensiveItemName = 'Car Insurance';
-    const expensivePrice = 350.87;
-    const locationOfExpenditure = 'Hyderabad'
+export default function ExpensiveItem(props) {
+  const {expenses} = props;
   return (
-    <div>
-      <div className="expensive-item">{date.toISOString()}</div>
-      <div>
-        <h2 className="expensive-item__description">{expensiveItemName}</h2>
-        <div className="expensive-item__price">${expensivePrice}</div>
-        <div>{locationOfExpenditure}</div>
-      </div>
+   expenses.map((expense)=>{ return [
+    <div className="expense-item">
+    <div key={expense.id}>{expense.date.toISOString()}</div>
+    <div className="expense-item__description">
+      <h2 >{expense.title}</h2>
+      <h2>{expense.location}</h2>
+      <div className="expense-item__price">${expense.price}</div>
     </div>
+
+   </div>]
+   })
+    
+    
   );
 }
