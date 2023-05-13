@@ -1,13 +1,10 @@
 import React from "react";
-import ExpensiveItem from "./ExpensiveItem";
-
-
+import ExpensiveItem from "./components/ExpensiveItem";
 
 function App() {
   return (
-    <div className="App-header" >
-      
-        <ExpensiveItem />
+    <div className="App-header">
+      <ExpensiveItem />
     </div>
   );
 }
