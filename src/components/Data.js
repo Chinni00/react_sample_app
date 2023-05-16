@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Data(props) {
+const Data=(props)=> {
     const {expenses} =props
   return (
     <div>
@@ -18,3 +18,4 @@ export default function Data(props) {
     </div>
   )
 }
+export default  Data;

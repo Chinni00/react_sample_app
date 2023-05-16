@@ -1,7 +1,7 @@
 import React from "react";
-import ExpensiveItem from "./components/ExpensiveItem";
+import ExpensiveItem from "./components/Expenses/ExpensiveItem";
 
-function App() {
+ const App=()=> {
   const expenses=[
     {
       id:1,

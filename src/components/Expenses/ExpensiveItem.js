@@ -1,8 +1,8 @@
 import React from "react";
-import Data from "./Data";
+import Data from "../Data";
 import "./ExpensiveItem.css";
 
-export default function ExpensiveItem(props) {
+ const ExpensiveItem=(props)=> {
   const {expenses} = props;
   
   return (
@@ -12,3 +12,4 @@ export default function ExpensiveItem(props) {
     </div>
   );
 }
+export default  ExpensiveItem;
