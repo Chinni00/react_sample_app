@@ -3,12 +3,12 @@ import Data from "../Data";
 import "./ExpensiveItem.css";
 
  const ExpensiveItem=(props)=> {
-  const {expenses} = props;
+  let {data} =props
   
   return (
     <div>
-    <Data expenses={expenses}/>
-    
+     <Data data={data} />
+      
     </div>
   );
 }

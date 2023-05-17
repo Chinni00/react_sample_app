@@ -1,26 +1,25 @@
-import React from 'react'
+import React, { useState } from "react";
 
-const Data=(props)=> {
+const Data = (props) => {
+  
+  const [title,setTitle] = useState(props.data.title);
+  function eventHandler(){
+    console.log(props.data.title)
+     setTitle('updated')
+  }
 
-    const {expenses} =props
-    const eventHandler = ()=>{
-      console.log('clicked!!!')
-    }
-
-  return (
-    <div>
-        {expenses.map((expense)=>{ return [
-    <div key={expense.id} className="expense-item">
-    <div className="expense-item__price">{expense.date.toDateString()}</div>
-    <div className="expense-item__description">
-      <h2 >{expense.title}</h2>
-      <h2>{expense.location}</h2>
-      <div className="expense-item__price">${expense.price}</div>
-    </div>
-    <button onClick={eventHandler}>Delete</button>
-   </div>
-   ]})}
+  return(
+    <div className="expense-item">
+      <div className="expense-item__price" >
+      {props.data.date.toLocaleString('US-en',{day:'2-digit'})} &nbsp;
+        {props.data.date.toLocaleString('US-en',{month:'long'})}<br></br>
+        &nbsp;{props.data.date.getFullYear()}
+      </div>
+      
+        <h1 className="expense-item__description">{title}</h1>
+        <div className="expense-item__price">{props.data.price}</div>
+       <button onClick={eventHandler} >Update</button>
     </div>
   )
-}
-export default  Data;
+};
+export default Data;
