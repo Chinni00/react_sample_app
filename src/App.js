@@ -1,5 +1,6 @@
 import React from "react";
 import ExpensiveItem from "./components/Expenses/ExpensiveItem";
+import NewExpenses from "./components/NewExpenses/NewExpenses";
 
  const App=()=> {
   const expenses=[
@@ -35,7 +36,10 @@ import ExpensiveItem from "./components/Expenses/ExpensiveItem";
   ]
   return (
     <div className="App-header">
-      
+      <div>
+        <NewExpenses />
+      </div>
+
       <ExpensiveItem  data={expenses[0]}  />
       <ExpensiveItem  data={expenses[1]}  />
       <ExpensiveItem  data={expenses[2]}  />

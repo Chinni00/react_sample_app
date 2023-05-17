@@ -1,0 +1,23 @@
+form{
+    width: 100vw;
+    background-color: skyblue;
+    height: 30vh;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+label,input{
+    width: 200px;
+    height: 25px;
+    margin: 5px;
+    border-radius: 10px;
+}
+.btn{
+    position: relative;
+    left: 2%;
+    width: 200px;
+    height: 25px;
+    border-radius: 10px;
+}

@@ -3,9 +3,8 @@ import React, { useState } from "react";
 const Data = (props) => {
   
   const [title,setTitle] = useState(props.data.title);
-  function eventHandler(){
-    console.log(props.data.title)
-     setTitle('updated')
+  function eventHandler(e){
+     setTitle('update')
   }
 
   return(
@@ -17,8 +16,9 @@ const Data = (props) => {
       </div>
       
         <h1 className="expense-item__description">{title}</h1>
-        <div className="expense-item__price">{props.data.price}</div>
-       <button onClick={eventHandler} >Update</button>
+        <div className="expense-item__price">${props.data.price}</div>
+       <button onClick={eventHandler} >Update title</button>
+
     </div>
   )
 };
