@@ -51,9 +51,20 @@ export default function ExpensesForm() {
         // })
 
     }
+
+    const submitHandler=(event)=>{
+        event.preventDefault();
+        const expenseData ={
+            title:enteredTitle,
+            price:enteredPrice,
+            date:new Date(enteredDate)
+        }
+        console.log(expenseData)
+    }
+
   return (
     <div>
-        <form >
+        <form onSubmit={submitHandler}>
             <div>
             <label>Expense Title:</label>
             <input placeholder='enter title' onChange={enteredTitleHandler} />
