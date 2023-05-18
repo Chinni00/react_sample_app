@@ -60,6 +60,9 @@ export default function ExpensesForm() {
             date:new Date(enteredDate)
         }
         console.log(expenseData)
+        setEnteredDate('');
+        setEnteredPrice('');
+        setEnteredTitle('');
     }
 
   return (
@@ -67,15 +70,15 @@ export default function ExpensesForm() {
         <form onSubmit={submitHandler}>
             <div>
             <label>Expense Title:</label>
-            <input placeholder='enter title' onChange={enteredTitleHandler} />
+            <input placeholder='enter title'value={enteredTitle} onChange={enteredTitleHandler} />
             </div>
             <div>
             <label>Expense price:</label>
-            <input type='number' min="1" step="0.1" placeholder='enter price' onChange={enteredPriceHandler} />
+            <input type='number' value={enteredPrice} min="1" step="0.1" placeholder='enter price' onChange={enteredPriceHandler} />
             </div>
             <div>
             <label>Date:</label>
-            <input type='date' onChange={enteredDateHandler}/>
+            <input type='date' value={enteredDate} onChange={enteredDateHandler}/>
             </div>
             <button type='submit' className='btn'>Add Expense</button>
         </form>
