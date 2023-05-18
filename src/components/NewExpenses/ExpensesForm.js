@@ -2,34 +2,53 @@ import React, { useState } from 'react'
 import "./ExpensesForm.css"
 
 export default function ExpensesForm() {
-   const [userInput,setUserInput]= useState({
-    enteredTitle:"",
-    enteredPrice:"",
-    enteredDate:""
-   })
+
+      const [enteredTitle , setEnteredTitle] = useState("");
+      const [enteredPrice , setEnteredPrice] = useState("");
+      const [enteredDate , setEnteredDate] = useState("");
+
+//    const [userInput,setUserInput]= useState({
+//     enteredTitle:"",
+//     enteredPrice:"",
+//     enteredDate:""
+//    })
     const  enteredTitleHandler=(e)=>{
-        // setEnteredTitle(e.target.value);
-        setUserInput({
-            ...userInput,
-            enteredTitle:e.target.value
-        })
+        
+         setEnteredTitle(e.target.value);
+        // setUserInput({
+        //     ...userInput,
+        //     enteredTitle:e.target.value
+        // })
+        //     another way to update state 
+        // setUserInput((prevState)=>{
+        //     return {...prevState,enteredTitle:e.target.value}
+        // })
     }
 
     // const [enteredPrice,setEnteredPrice]= useState('')
     const  enteredPriceHandler=(e)=>{
-        // setEnteredPrice(e.target.value);
-        setUserInput({
-            ...userInput,
-            enteredPrice:e.target.value
-        })
+         setEnteredPrice(e.target.value);
+        // setUserInput({
+        //     ...userInput,
+        //     enteredPrice:e.target.value
+        // })
+        //     another way to update state 
+        // setUserInput((prevState)=>{
+        //     return {...prevState,enteredPrice:e.target.value}
+        // })
     }
 
     // const [enteredDate,setEnteredDate]= useState('')
     const  enteredDateHandler=(e)=>{
-         setUserInput({
-            ...userInput,
-            enteredDate:e.target.value
-         })
+        setEnteredDate(e.target.value)
+        //  setUserInput({
+        //     ...userInput,
+        //     enteredDate:e.target.value
+        //  })
+        //     another way to update state 
+        // setUserInput((prevState)=>{
+        //     return {...prevState,enteredDate:e.target.value}
+        // })
 
     }
   return (
@@ -47,7 +66,7 @@ export default function ExpensesForm() {
             <label>Date:</label>
             <input type='date' onChange={enteredDateHandler}/>
             </div>
-            <button className='btn'>Add Event</button>
+            <button type='submit' className='btn'>Add Expense</button>
         </form>
     </div>
   )
