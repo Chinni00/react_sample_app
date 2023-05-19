@@ -1,0 +1,9 @@
+.warning{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+    background-color: #3b3b3b;
+    color: rgb(190, 252, 232);
+}

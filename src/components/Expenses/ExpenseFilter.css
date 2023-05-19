@@ -1,0 +1,14 @@
+.expenses-filter{
+    background-color: #3a3a3a;
+    height: 40px;
+    text-align: end;
+    color: cornsilk;
+    font-size: x-large;
+    font-weight: bold;
+}
+select{
+    width: 70px;
+    height: 25px;
+    margin: 5px;
+    margin-left: 10px;
+}
