@@ -55,9 +55,11 @@ export default function ExpensesForm(props) {
     const submitHandler=(event)=>{
         event.preventDefault();
         const expenseData ={
+            id:Math.random().toString(),
             title:enteredTitle,
             price:enteredPrice,
-            date:new Date(enteredDate)
+            date:new Date(enteredDate),
+            
         }
         props.onAddExpense(expenseData)
         setEnteredDate('');

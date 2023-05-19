@@ -5,9 +5,11 @@ import "./ExpensiveItem.css";
  const ExpensiveItem=(props)=> {
   let {data} =props
   
+  
   return (
     <div>
-     <Data data={data} />
+      
+     <Data data={data}  />
       
     </div>
   );

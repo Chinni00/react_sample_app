@@ -1,24 +1,31 @@
-import React, { useState } from "react";
+
 
 const Data = (props) => {
+  let {data} = props;
   
-  const [title,setTitle] = useState(props.data.title);
-  function eventHandler(e){
-     setTitle('update')
-  }
-
+  
+  
   return(
-    <div className="expense-item">
-      <div className="expense-item__price" >
-      {props.data.date.toLocaleString('US-en',{day:'2-digit'})} &nbsp;
-        {props.data.date.toLocaleString('US-en',{month:'long'})}<br></br>
-        &nbsp;{props.data.date.getFullYear()}
-      </div>
+    <div className="UI">
       
-        <h1 className="expense-item__description">{title}</h1>
-        <div className="expense-item__price">${props.data.price}</div>
-       <button onClick={eventHandler} >Update title</button>
+      {data.map((expense)=>{  return [
+        <div key={expense.id}  className="expense-item" >
+           <div className="expense-item__price">
+            {expense.date.toLocaleString("en-US",{month:"long"})}
+            {expense.date.toLocaleString("en-US",{day:"2-digit"})}<br />
+            &nbsp;{expense.date.getFullYear()}
 
+           </div>
+           <div className="" >
+              <h1 className="expense-item__description" >{expense.title}</h1>
+              
+           </div>
+           <div className="expense-item__price">${expense.price}</div>
+        </div>
+      ]
+        
+      })}
+      
     </div>
   )
 };
