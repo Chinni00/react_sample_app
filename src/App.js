@@ -34,10 +34,15 @@ import NewExpenses from "./components/NewExpenses/NewExpenses";
     },
 
   ]
+
+  const additionExpense =(expense)=>{
+    console.log(expense)
+  }
+
   return (
     <div className="App-header">
       <div>
-        <NewExpenses />
+        <NewExpenses onAdditionExpense={additionExpense} />
       </div>
 
       <ExpensiveItem  data={expenses[0]}  />
