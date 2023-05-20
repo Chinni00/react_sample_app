@@ -7,7 +7,7 @@ const Data = (props) => {
   
   return(
     <div className="UI">
-      {data.length===0 ? <h2 className="warning">No data found</h2>:
+      {data.length===0 ? <h2 className="warning">No data found</h2> :
       data.map((expense)=>{  return [
         <div key={expense.id}  className="expense-item" >
            <div className="expense-item__price">

@@ -7,8 +7,12 @@
     margin: 1rem 0;
     border-radius: 12px;
     background-color: #4b4b4b;
+    
   }
   
+  .expense{
+    margin-top: 50px;
+  }
   .expense-item__description {
     display: flex;
     flex-direction: column;

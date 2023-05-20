@@ -7,7 +7,7 @@ import "./ExpensiveItem.css";
   
   
   return (
-    <div>
+    <div className="expense">
       
      <Data data={data}  />
       

@@ -1,12 +1,9 @@
-form{
+form,.form{
     width: 100vw;
-    background-color: skyblue;
+    background-color: #3a3a3a;
     height: 30vh;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    margin-left: 40%;
+    color: antiquewhite;
 }
 label,input{
     width: 200px;
@@ -16,8 +13,16 @@ label,input{
 }
 .btn{
     position: relative;
-    left: 2%;
     width: 200px;
     height: 25px;
     border-radius: 10px;
+
+}
+
+.btn-before{
+    position: absolute;
+    left: 50%;
+    border-radius: 10px;
+    width: 11em;
+    height: 3em;
 }
